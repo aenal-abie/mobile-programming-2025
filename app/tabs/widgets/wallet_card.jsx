@@ -22,7 +22,7 @@ const WalletCard = () => {
         <VStack style={styles.balanceContainer}>
           <VStack>
             <Text category="s2">Saldo</Text>
-            <Text category="h5" style={styles.balanceText}>
+            <Text className="text-2xl" style={styles.balanceText}>
               IDR 895.500,00
             </Text>
           </VStack>
@@ -32,7 +32,7 @@ const WalletCard = () => {
               className="text-yellow-300"
               style={styles.starIcon}
             />
-            <Text category="s1" style={styles.pointText}>
+            <Text className="text-lg" style={styles.pointText}>
               9.500
             </Text>
           </VStack>

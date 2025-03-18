@@ -9,7 +9,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useState } from "react";
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import { useColorScheme } from "@/components/useColorScheme";
-import { Slot } from "expo-router";
+import { Slot, Stack } from "expo-router";
 
 import "../global.css";
 
