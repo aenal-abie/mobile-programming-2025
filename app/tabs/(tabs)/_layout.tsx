@@ -2,14 +2,23 @@ import React from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
+import { Icon } from "@/components/ui/icon";
+import { LucideIcon, Star } from "lucide-react-native";
+import { Home } from "lucide-react-native";
 
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>["name"];
-  color: string;
-}) {
-  return <FontAwesome size={18} style={{ marginBottom: -3 }} {...props} />;
+function TabBarIcon({ icon, color }: { icon: LucideIcon; color: string }) {
+  return (
+    <Icon
+      as={icon}
+      stroke={color}
+      style={{ marginBottom: -3 }}
+    />
+  );
 }
 
+const homeTabIcon = () => <TabBarIcon icon={Home} color={"#125297"} />;
+const tab1TabIcon = () => <TabBarIcon icon={Star} color={"#125297"} />;
+const tab2TabIcon = () => <TabBarIcon icon={Star} color={"#125297"} />;
 export default function TabLayout() {
   return (
     <Tabs
@@ -22,23 +31,23 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Expo V3",
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          title: "Home",
+          tabBarIcon: ({ color }) => homeTabIcon(),
         }}
       />
 
       <Tabs.Screen
         name="tab1"
         options={{
-          title: "Tab 1",
-          tabBarIcon: ({ color }) => <TabBarIcon name="star-o" color={color} />,
+          title: "History",
+          tabBarIcon: ({ color }) => tab1TabIcon(),
         }}
       />
       <Tabs.Screen
         name="tab2"
         options={{
-          title: "Tab 2",
-          tabBarIcon: ({ color }) => <TabBarIcon name="star-o" color={color} />,
+          title: "Profile",
+          tabBarIcon: ({ color }) => tab2TabIcon(),
         }}
       />
     </Tabs>

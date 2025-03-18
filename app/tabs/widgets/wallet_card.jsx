@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, ImageBackground } from "react-native";
+import { StyleSheet, ImageBackground } from "react-native";
 import { Text } from "@/components/ui/text";
 import { Icon } from "@/components/ui/icon";
 import {
@@ -19,14 +19,14 @@ const WalletCard = () => {
         style={styles.card}
         imageStyle={{ borderRadius: 15 }}
       >
-        <View style={styles.balanceContainer}>
-          <View>
+        <VStack style={styles.balanceContainer}>
+          <VStack>
             <Text category="s2">Saldo</Text>
             <Text category="h5" style={styles.balanceText}>
               IDR 895.500,00
             </Text>
-          </View>
-          <View style={styles.pointContainer}>
+          </VStack>
+          <VStack style={styles.pointContainer}>
             <Icon
               as={StarIcon}
               className="text-yellow-300"
@@ -35,31 +35,31 @@ const WalletCard = () => {
             <Text category="s1" style={styles.pointText}>
               9.500
             </Text>
-          </View>
-        </View>
+          </VStack>
+        </VStack>
 
-        <View style={styles.menuContainer}>
-          <View style={styles.menuItemContainer}>
-            <View style={styles.menuItemWrapper}>
+        <VStack style={styles.menuContainer}>
+          <VStack style={styles.menuItemContainer}>
+            <VStack style={styles.menuItemWrapper}>
               <Icon as={Wallet} size="xl" style={styles.menuIcon} />
-            </View>
-          </View>
-          <View style={styles.menuItemContainer}>
-            <View style={styles.menuItemWrapper}>
+            </VStack>
+          </VStack>
+          <VStack style={styles.menuItemContainer}>
+            <VStack style={styles.menuItemWrapper}>
               <Icon as={ArrowLeftRight} size="xl" style={styles.menuIcon} />
-            </View>
-          </View>
-          <View style={styles.menuItemContainer}>
-            <View style={styles.menuItemWrapper}>
+            </VStack>
+          </VStack>
+          <VStack style={styles.menuItemContainer}>
+            <VStack style={styles.menuItemWrapper}>
               <Icon as={ArchiveRestore} style={styles.menuIcon} />
-            </View>
-          </View>
-          <View style={styles.menuItemContainer}>
-            <View style={styles.menuItemWrapper}>
+            </VStack>
+          </VStack>
+          <VStack style={styles.menuItemContainer}>
+            <VStack style={styles.menuItemWrapper}>
               <Icon as={ScanLine} style={styles.menuIcon} />
-            </View>
-          </View>
-        </View>
+            </VStack>
+          </VStack>
+        </VStack>
       </ImageBackground>
     </VStack>
   );
