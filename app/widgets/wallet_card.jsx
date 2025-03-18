@@ -15,7 +15,7 @@ const WalletCard = () => {
   return (
     <VStack className="mt-5 mx-2">
       <ImageBackground
-        source={require("../../../assets/images/bg.jpg")} // Background Gradient
+        source={require("../../assets/images/bg.jpg")} // Background Gradient
         style={styles.card}
         imageStyle={{ borderRadius: 15 }}
       >
