@@ -36,14 +36,14 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="tab1"
+        name="history"
         options={{
           title: "History",
           tabBarIcon: ({ color }) => tab1TabIcon(),
         }}
       />
       <Tabs.Screen
-        name="tab2"
+        name="profile"
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => tab2TabIcon(),

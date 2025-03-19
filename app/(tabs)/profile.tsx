@@ -7,10 +7,9 @@ import { Text } from "@/components/ui/text";
 export default function Tab2() {
   return (
     <Center className="flex-1">
-      <Heading className="font-bold text-2xl">Expo V3 - Tab 1</Heading>
+      <Heading className="font-bold text-2xl">Profile</Heading>
       <Divider className="my-[30px] w-[80%]" />
       <Text className="p-4">Example below to use gluestack-ui components.</Text>
-      <EditScreenInfo path="app/(app)/(tabs)/tab1.tsx" />
     </Center>
   );
 }
